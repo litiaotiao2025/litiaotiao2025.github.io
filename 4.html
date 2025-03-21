@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025李跳跳 2.4 | 附加3000条规则软件下载,告别开屏广告</title>
+<meta name="keywords" content="[Android] 李跳跳最新规则,李跳跳v2.4 导入规则版" />
+<meta name="description" content="如何使用李跳跳v2.4的导入规则功能来避开各种APP的开屏广告，包括大佬整理的规则和手动添加规则的方法。提供了规则网站、AutoJs6工具和示例的使用教程。" />
+    
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 6rem 0 4rem;
+        }
+        .feature-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .screenshot {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 100%;
+            height: auto;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+        }
+        .badge-new {
+            background: #e74c3c;
+            font-size: 0.8em;
+            vertical-align: super;
+        }
+        .version-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .version-table th {
+            background: var(--primary-color);
+            color: white;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .accordion-body ul {
+            padding-left: 1.5rem;
+        }
+        .accordion-body li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-skip-forward"></i> 李跳跳</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#features">核心优势</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutorial">使用教程</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#download">下载</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主视觉区域 -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">智能跳过广告，还你清爽手机体验</h1>
+            <p class="lead mb-4">支持9000+应用规则 · 最新AI图像识别技术 · 安卓全版本兼容</p>
+            <img src="screenshot.jpg" alt="软件界面预览" class="screenshot mb-4">
+            <div class="download-btn-group">
+                <a href="#download" class="btn btn-success btn-lg mx-2"><i class="bi bi-download"></i> 下载2.4蓝色版</a>
+                <a href="#download" class="btn btn-primary btn-lg mx-2"><i class="bi bi-box-arrow-down"></i> 派大星3.0版</a>
+            </div>
+            <small class="text-light mt-2 d-block">当前最新版本：v3.27.10（2025-02-27更新）</small>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">核心优势 <span class="badge badge-new">NEW</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-gpu-card display-4 text-primary"></i>
+                            <h4 class="mt-3">智能广告识别</h4>
+                            <p class="text-muted">采用AI图像识别技术，支持开屏广告、弹窗广告、视频插播广告等多类型跳过[1,3](@ref)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-shield-lock display-4 text-primary"></i>
+                            <h4 class="mt-3">隐私安全保障</h4>
+                            <p class="text-muted">完全离线运行，无任何联网权限，通过多家安全机构认证[3,5](@ref)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多优势卡片... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用教程 -->
+    <section id="tutorial" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">使用教程</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5>基础设置</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex mb-4">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h5>开启无障碍服务</h5>
+                                    <p class="text-muted">安装后进入软件 → 点击主界面开关 → 前往系统「无障碍」设置启用服务[6,8](@ref)</p>
+                                </div>
+                            </div>
+                            <!-- 更多步骤... -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5>高级功能</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex mb-4">
+                                <div class="step-number">①</div>
+                                <div>
+                                    <h5>单应用设置</h5>
+                                    <p class="text-muted">进入「更多」→「设置」→ 选择目标应用 → 自定义跳过方式[5,8](@ref)</p>
+                                </div>
+                            </div>
+                            <!-- 更多高级功能... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">常见问题</h2>
+            <div class="accordion" id="faqAccordion">
+                
+                <!-- 一、安装与兼容性问题 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#install1">
+                            一、安装与兼容性问题：安卓12/13系统闪退
+                        </button>
+                    </h3>
+                    <div id="install1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p><strong>原因：</strong>旧版本未适配新系统权限机制</p>
+                            <p><strong>解决方案：</strong></p>
+                            <ul>
+                                <li>下载<a href="#download" class="text-primary">2.4蓝色版</a>（需通过GitHub获取）</li>
+                                <li>或使用派大星3.0适配版</li>
+                                <li>临时方案：设置 → 开发者选项 → 开启「停用HW叠加层」</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 二、功能使用问题 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#function1">
+                            二、功能使用问题：规则导入失败
+                        </button>
+                    </h3>
+                    <div id="function1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p><strong>解决方法：</strong></p>
+                            <ol>
+                                <li>切换至系统默认输入法</li>
+                                <li>禁用剪贴板保护功能</li>
+                                <li>检查规则首尾是否为<code>[{...}]</code>结构</li>
+                                <li>使用<a href="https://note.ms/xxx" target="_blank" rel="noopener">在线文档同步</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 三、规则管理问题 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rule1">
+                            三、规则管理问题：自定义规则丢失
+                        </button>
+                    </h3>
+                    <div id="rule1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p><strong>预防措施：</strong></p>
+                            <ul>
+                                <li>每次更新前通过「规则管理」→「导出配置」保存本地</li>
+                                <li>建议使用云备份功能</li>
+                            </ul>
+                            <pre>备份路径：
+/Android/data/ltiapp/config
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 四、系统权限问题 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#permission1">
+                            四、系统权限问题：无障碍服务自动关闭
+                        </button>
+                    </h3>
+                    <div id="permission1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p><strong>解决方案：</strong></p>
+                            <ol>
+                                <li>MIUI系统：设置 → 电池优化 → 选择「无限制」</li>
+                                <li>定期检查通知栏服务图标状态</li>
+                                <li>关闭手机管家等安全软件的自动优化功能</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 五、高级功能配置 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advance1">
+                            五、高级功能配置：多设备同步
+                        </button>
+                    </h3>
+                    <div id="advance1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p><strong>同步方案：</strong></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>方案一：云同步</h6>
+                                    <ul>
+                                        <li>需注册开发者账号</li>
+                                        <li>支持实时同步规则配置</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>方案二：手动同步</h6>
+                                    <ul>
+                                        <li>复制文件夹：<code>/Android/data/ltiapp/config</code></li>
+                                        <li>建议使用MT管理器操作</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 六、版本区别指南 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#versionGuide">
+                            六、版本区别指南
+                        </button>
+                    </h3>
+                    <div id="versionGuide" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <div class="table-responsive version-table">
+                                <table class="table table-striped mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>版本</th>
+                                            <th>特点</th>
+                                            <th>适用系统</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2.2派大星</td>
+                                            <td>稳定版（停更维护）</td>
+                                            <td>安卓7-11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.4蓝色版</td>
+                                            <td>支持安卓12/13</td>
+                                            <td>需ROOT权限</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.0测试版</td>
+                                            <td>AI学习广告（测试功能）</td>
+                                            <td>安卓14+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 七、其他高频问题 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#other1">
+                            七、企业微信适配问题
+                        </button>
+                    </h3>
+                    <div id="other1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p><strong>配置步骤：</strong></p>
+                            <ol>
+                                <li>规则管理 → 添加 <code>com.tencent.wework</code></li>
+                                <li>启用「深度跳过」选项</li>
+                                <li>关闭企业微信的「安全键盘」</li>
+                            </ol>
+                            <div class="alert alert-warning mt-3">
+                                <i class="bi bi-exclamation-triangle"></i> 注意：需要企业微信版本 ≥ 4.1.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p class="mb-2">© 2025 李跳跳 · 软件版权归原作者所有 · 本站仅提供使用说明</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="text-light"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-wechat"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
